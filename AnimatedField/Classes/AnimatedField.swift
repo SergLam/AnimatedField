@@ -96,6 +96,23 @@ open class AnimatedField: UIView {
         didSet { textField.isSecureTextEntry = isSecure }
     }
     
+    /// Text field content type (dot format)
+    public var contentType: UITextContentType? {
+        didSet {
+            guard let type = contentType else {
+                return
+            }
+            textField.textContentType = type
+        }
+    }
+    
+    /// Text field content type (dot format)
+    public var shouldAutocorrect = UITextAutocorrectionType.default {
+        didSet {
+            textField.autocorrectionType = shouldAutocorrect
+        }
+    }
+    
     /// Show visible button to make field unsecure
     public var showVisibleButton = false {
         didSet {
