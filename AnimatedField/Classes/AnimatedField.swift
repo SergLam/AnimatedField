@@ -96,7 +96,7 @@ open class AnimatedField: UIView {
         didSet { textField.isSecureTextEntry = isSecure }
     }
     
-    /// Text field content type (dot format)
+    /// Text field content type (UITextContentType)
     public var contentType: UITextContentType? {
         didSet {
             guard let type = contentType else {
@@ -106,7 +106,7 @@ open class AnimatedField: UIView {
         }
     }
     
-    /// Text field content type (dot format)
+    /// Text field autocorrection type (UITextAutocorrectionType)
     public var shouldAutocorrect = UITextAutocorrectionType.default {
         didSet {
             textField.autocorrectionType = shouldAutocorrect
