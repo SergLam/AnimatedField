@@ -96,6 +96,14 @@ open class AnimatedField: UIView {
         didSet { textField.isSecureTextEntry = isSecure }
     }
     
+    /// Text field autocorrection type (UITextAutocorrectionType)
+    public var autocapitalizationType = UITextAutocapitalizationType.none {
+        didSet {
+            textField.autocapitalizationType = autocapitalizationType
+        }
+    }
+    
+    
     /// Text field content type (UITextContentType)
     public var contentType: UITextContentType? {
         didSet {
